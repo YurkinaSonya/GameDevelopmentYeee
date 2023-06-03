@@ -1201,3 +1201,5 @@ MonoBehaviour:
   color: {fileID: 4874126678125670354, guid: afcaa1128b53f4b438cf8c59ca1abe4d, type: 3}
   curRot: {x: 90, y: 0, z: 0}
   size: 100
+  n: 0
+  m: 0
