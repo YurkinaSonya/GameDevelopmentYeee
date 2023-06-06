@@ -7,7 +7,9 @@ public class maybeMatrixFill : MonoBehaviour
 	public Mesh wallMesh;
 	public Material color;
 	public Vector3 curRot;
+	public float rotateCoef;
 	public int size;
+	public int radius;
 	public int n;
 	public int m;
 	
@@ -46,7 +48,7 @@ public class maybeMatrixFill : MonoBehaviour
 				}
 				
 				else if (dir[dInd] == 2) {
-					if (j + 2 < n && map[i,j + 2] == 0 && map[i, j + 1] > 0) {
+					if (j + 2 < m && map[i,j + 2] == 0 && map[i, j + 1] > 0) {
 						map[i, j + 1] = 0;
 						dir.Clear();
 						ch = 0;
@@ -62,7 +64,7 @@ public class maybeMatrixFill : MonoBehaviour
 				}
 				
 				else if (dir[dInd] == 4) {
-					if (i + 2 < m && map[i + 2, j] == 0 && map[i + 1, j] > 0) {
+					if (i + 2 <n && map[i + 2, j] == 0 && map[i + 1, j] > 0) {
 						map[i + 1, j] = 0;
 						dir.Clear();
 						ch = 0;
@@ -80,7 +82,7 @@ public class maybeMatrixFill : MonoBehaviour
 				listForCheckJ.Add(j - 2);
 				map[i, j - 2] = 0;
 			}
-			if (j + 2 < n && map[i, j + 2] > 0) {
+			if (j + 2 < m && map[i, j + 2] > 0) {
 				listForCheckI.Add(i);
 				listForCheckJ.Add(j + 2);
 				map[i, j + 2] = 0;
@@ -90,7 +92,7 @@ public class maybeMatrixFill : MonoBehaviour
 				listForCheckJ.Add(j);
 				map[i - 2, j] = 0;
 			}
-			if (i + 2 < m && map[i + 2, j] > 0) {
+			if (i + 2 < n && map[i + 2, j] > 0) {
 				listForCheckI.Add(i + 2);
 				listForCheckJ.Add(j);
 				map[i + 2, j] = 0;
@@ -113,7 +115,7 @@ public class maybeMatrixFill : MonoBehaviour
 				mapForLab[i,j] = 1;
 			}
 		}
-		generateLab(mapForLab);
+		//generateLab(mapForLab);
 		float dist = 0.25f;
 		//GameObject.CreatePrimitive(PrimitiveType.Cube);
 		for (int i = 0; i < n; i++) {
@@ -125,16 +127,38 @@ public class maybeMatrixFill : MonoBehaviour
 				wall.AddComponent<MeshFilter>();
 				wall.AddComponent<MeshRenderer>();
 				wall.AddComponent<Renderer>();
+				wall.AddComponent<MeshCollider>();
+				
+				//wall.AddComponent<Grabbable>();
+				
 				if (mapForLab[i,j] == 0) {
 					wall.SetActive(false);
 				}
 				wall.GetComponent<MeshFilter>().mesh = wallMesh;
+				wall.GetComponent<MeshCollider>().sharedMesh = wallMesh;
+				wall.GetComponent<MeshCollider>().convex = true;
 				wall.GetComponent<Renderer>().material = color;
 				wall.transform.localScale *= size;
 				wall.transform.SetParent(transform);
-				wall.transform.localPosition = new Vector3(dist * i,0.5f,-(dist * 3) * j);
-				wall.transform.eulerAngles = new Vector3(curRot.x % 360f, curRot.y % 360f, curRot.z % 360f) ;
-						
+				
+				Debug.Log("!!!!!!!!!!!!!!!!!!!!" + i.ToString() + "    " + j.ToString());
+				if (rotateCoef*i <= 90) {
+					float angle = rotateCoef*i * Mathf.Deg2Rad;
+					Debug.Log(rotateCoef*i);
+					Debug.Log(angle);
+					Debug.Log(Mathf.Sin(angle));
+					wall.transform.localPosition = new Vector3(dist * i, radius * Mathf.Sin(angle),-(dist * 2) * j);
+				}
+				else {
+					float angle = (180 - rotateCoef*i) * Mathf.Deg2Rad;
+					Debug.Log(180 - rotateCoef*i);
+					Debug.Log(angle);
+					Debug.Log(radius * Mathf.Cos(angle));
+					wall.transform.localPosition = new Vector3(dist * (180 - i), radius *(1 + Mathf.Cos(angle)),-(dist * 2) * j);
+				}
+				wall.transform.eulerAngles = new Vector3(curRot.x % 360f, curRot.y % 360f, curRot.z % 360f);
+				//wall.transform.eulerAngles = new Vector3(curRot.x % 360f, (rotateCoef * i) % 360f, curRot.z % 360f);
+				//Debug.Log((rotateCoef * i) % 360f);
 			}
 		}
     }
