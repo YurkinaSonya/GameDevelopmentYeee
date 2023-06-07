@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toonTest
+  m_Name: wood
   m_Shader: {fileID: 4800000, guid: ca035891872022e4f80c952b3916e450, type: 3}
   m_ValidKeywords:
   - _EMISSIVE_SIMPLE
@@ -121,16 +121,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 0.032
-    - _1st_ShadeColor_Feather: 0.086
-    - _1st_ShadeColor_Step: 0.429
-    - _2nd_ShadeColor_Feather: 0.032
-    - _2nd_ShadeColor_Step: 0.212
+    - _1st2nd_Shades_Feather: 0.05
+    - _1st_ShadeColor_Feather: 0.0001
+    - _1st_ShadeColor_Step: 0.694
+    - _2nd_ShadeColor_Feather: 0.05
+    - _2nd_ShadeColor_Step: 0.617
     - _Add_Antipodean_RimLight: 0
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
-    - _BaseColor_Step: 0.429
-    - _BaseShade_Feather: 0.086
+    - _BaseColor_Step: 0.694
+    - _BaseShade_Feather: 0.0001
     - _Base_Speed: 0
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
@@ -143,7 +143,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EMISSIVE: 0
-    - _Farthest_Distance: 100.74
+    - _Farthest_Distance: 100.01
     - _GI_Intensity: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -183,7 +183,7 @@ Material:
     - _MatCap: 0
     - _Metallic: 0
     - _Mode: 0
-    - _Nearest_Distance: 100
+    - _Nearest_Distance: 99.13
     - _OUTLINE: 1
     - _OcclusionStrength: 1
     - _Offset_X_Axis_BLD: -0.05
@@ -201,7 +201,7 @@ Material:
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.212
+    - _ShadeColor_Step: 0.617
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -224,11 +224,11 @@ Material:
     - _utsTechnique: 1
     - _utsVersion: 2.09
     m_Colors:
-    - _1st_ShadeColor: {r: 0.7151404, g: 0.6509256, b: 0.9150943, a: 1}
-    - _2nd_ShadeColor: {r: 0.38462085, g: 0.39617264, b: 0.6981132, a: 1}
+    - _1st_ShadeColor: {r: 0.4433962, g: 0.29898676, b: 0.27775007, a: 1}
+    - _2nd_ShadeColor: {r: 0.3490566, g: 0.18243146, b: 0.2233018, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.46226418, g: 0.3338039, b: 0.2764863, a: 1}
+    - _Color: {r: 0.46226412, g: 0.33380383, b: 0.27648628, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}

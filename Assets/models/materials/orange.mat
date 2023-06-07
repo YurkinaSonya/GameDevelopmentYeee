@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toonTest
-  m_Shader: {fileID: 4800000, guid: ca035891872022e4f80c952b3916e450, type: 3}
+  m_Name: orange
+  m_Shader: {fileID: 4800000, guid: 9baf30ce95c751649b14d96da3a4b4d5, type: 3}
   m_ValidKeywords:
   - _EMISSIVE_SIMPLE
   - _OUTLINE_POS
@@ -103,6 +103,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Set_1st_ShadePosition:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Set_2nd_ShadePosition:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Set_HighColorMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -121,16 +129,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 0.032
-    - _1st_ShadeColor_Feather: 0.086
-    - _1st_ShadeColor_Step: 0.429
-    - _2nd_ShadeColor_Feather: 0.032
-    - _2nd_ShadeColor_Step: 0.212
+    - _1st2nd_Shades_Feather: 0.087
+    - _1st_ShadeColor_Feather: 0.104
+    - _1st_ShadeColor_Step: 0.368
+    - _2nd_ShadeColor_Feather: 0.087
+    - _2nd_ShadeColor_Step: 0.347
     - _Add_Antipodean_RimLight: 0
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
-    - _BaseColor_Step: 0.429
-    - _BaseShade_Feather: 0.086
+    - _BaseColor_Step: 0.368
+    - _BaseShade_Feather: 0.104
     - _Base_Speed: 0
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
@@ -143,7 +151,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EMISSIVE: 0
-    - _Farthest_Distance: 100.74
+    - _Farthest_Distance: 101.8
     - _GI_Intensity: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -201,7 +209,7 @@ Material:
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.212
+    - _ShadeColor_Step: 0.347
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -220,15 +228,15 @@ Material:
     - _Use_1stAs2nd: 0
     - _Use_BaseAs1st: 0
     - _ZWrite: 1
-    - _simpleUI: 0
-    - _utsTechnique: 1
+    - _simpleUI: 2
+    - _utsTechnique: 0
     - _utsVersion: 2.09
     m_Colors:
-    - _1st_ShadeColor: {r: 0.7151404, g: 0.6509256, b: 0.9150943, a: 1}
-    - _2nd_ShadeColor: {r: 0.38462085, g: 0.39617264, b: 0.6981132, a: 1}
+    - _1st_ShadeColor: {r: 0.8679245, g: 0.4951636, b: 0.30622995, a: 1}
+    - _2nd_ShadeColor: {r: 0.6886792, g: 0.3168108, b: 0.22999282, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.9056604, g: 0.62060684, b: 0.47333568, a: 1}
+    - _Color: {r: 0.9056604, g: 0.6206068, b: 0.47333562, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
